@@ -9,7 +9,7 @@ pipeline{
         stage("test"){
             steps{
                 sh 'url -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash'
-                sh '\. "$HOME/.nvm/nvm.sh"'
+                sh '\. /root/.nvm/nvm.sh'
                 sh 'npm install 22'
                 sh 'node -v'
                 sh 'npm -v'

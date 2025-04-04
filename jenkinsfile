@@ -13,8 +13,13 @@ pipeline{
         }
         stage("build docker image"){
             steps{
-                sh 'sudo docker build -t nodeapp:v2 .'
+                sh 'sudo docker build -t nodeapp:v1 .'
 
+            }
+        }
+        stage("start container with docker image"){
+            steps{
+                sh 'sudo docker run --name nodeapp-v1 -d -p 8888:3000 nodeapp:v1'
             }
         }
   }

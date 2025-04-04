@@ -8,7 +8,8 @@ pipeline{
         }
         stage("test"){
             steps{
-                sh 'npm install express --save'
+               
+                sh 'npm install 22'
                 sh 'npm test'
             }
         }

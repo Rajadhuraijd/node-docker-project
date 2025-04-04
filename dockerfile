@@ -1,5 +1,5 @@
 FROM node:latest
 WORKDIR /apps
-ADD git@github.com:Rajadhuraijd/node-docker-project.git .
+ADD . .
 RUN npm install 
 CMD ["node", "index.js"]
